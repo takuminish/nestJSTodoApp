@@ -18,12 +18,12 @@ export class Todo {
     @Column()
     create_user: string;
 
-    @Column()
+    @Column(({ type: 'timestamp' }))
     created_at: Date;
 
     @Column()
     update_user: string;
 
-    @Column()
+    @Column(({ type: 'timestamp' }))
     update_at: Date;
 }

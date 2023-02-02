@@ -7,18 +7,18 @@ import { Repository } from 'typeorm';
 export class TodoService {
   constructor(
     @InjectRepository(Todo)
-    private usersRepository: Repository<Todo>,
+    private todoRepository: Repository<Todo>,
   ) { }
 
   findAll(): Promise<Todo[]> {
-    return this.usersRepository.find();
+    return this.todoRepository.find();
   }
 
   findOne(todo_id: string): Promise<Todo> {
-    return this.usersRepository.findOneBy({ todo_id });
+    return this.todoRepository.findOneBy({ todo_id });
   }
 
   async remove(todo_id: string): Promise<void> {
-    await this.usersRepository.delete(todo_id);
+    await this.todoRepository.delete(todo_id);
   }
 }

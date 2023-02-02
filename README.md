@@ -17,3 +17,9 @@
 - NestJS
 - Docker
 - MySQL
+
+## 起動方法
+```
+$ docker-compose up -d
+```
+`localhost:3000/todo`にアクセスして、TODOテーブルのレコードが取得できていれば良い。
