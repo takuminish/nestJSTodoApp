@@ -9,6 +9,7 @@ services:
       - 3000:3000
     volumes:
       - .:/app
+    command: npm run start:dev
   db:
     build:
       context: ./
@@ -21,4 +22,3 @@ services:
     environment:
       TZ: Asia/Tokyo
       MYSQL_ROOT_PASSWORD: root
-      BIND-ADDRESS: 0.0.0.0
